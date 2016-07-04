@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import sys, subprocess, i3
+
+# Maps auxillary mouse buttons to keyboard shortcuts for specific programs
+# Buttons are defined in ~/.xbindkeysrc
+
+options = {
+    (u'spotify','back') : 'xdotool key ctrl+bracketleft',
+    (u'spotify','forward') : 'xdotool key ctrl+bracketright',
+
+    (u'google-chrome','back') : 'xdotool key BackSpace',
+    (u'google-chrome','forward') : 'xdotool key Shift+BackSpace',
+    (u'google-chrome','zoom') : 'xdotool key ctrl+w',
+
+    (u'vivaldi-snapshot','back') : 'xdotool key ctrl+Left',
+    (u'vivaldi-snapshot','forward') : 'xdotool key ctrl+Right',
+    (u'vivaldi-snapshot','zoom') : 'xdotool key ctrl+w',
+    
+}
+
+current = i3.filter(nodes=[], focused=True)[0]['window_properties']['class'].lower()
+button = sys.argv[1]
+
+subprocess.Popen(options[(current,button)], shell=True)

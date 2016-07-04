@@ -1,0 +1,48 @@
+#!/bin/bash
+
+get_volume() {
+    regex="([0-9]+)% /" 
+    line=`pactl list sinks | grep -m 1 -e "Volume:*"`
+    [[ $line =~ $regex ]]
+    echo "${BASH_REMATCH[1]}"
+}
+
+show_volume () {
+    if [ $# -eq 1 ]; then
+        volume=0
+        icon="muted"
+    else
+        volume=$(get_volume)
+        if [ $volume -eq 0 ]; then
+            icon="off"
+        elif [ $volume -lt 35 ]; then
+            icon="low"
+        elif [ $volume -lt 70 ]; then
+            icon="medium"
+        else
+            icon="high"
+        fi
+    fi
+    `gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.Notify 'gnome-settings-daemon' 0 "notification-audio-volume-$icon" ' ' '' [] "{'x-canonical-private-synchronous': <'volume'>, 'value': <$volume>}" 1`
+}
+
+volume=$(get_volume)
+case $1 in
+    -g|--get)
+        echo $volume
+        ;;
+    -m|--mute)
+        `pactl set-sink-mute 0 toggle`
+        show_volume mute
+        ;;
+    -r|--raise)
+        if [ $(($volume + $2)) -le 100 ]; then
+            `pactl set-sink-volume 0 +$2%`
+            show_volume
+        fi
+        ;;
+    -l|--lower)
+        `pactl set-sink-volume 0 -$2%`
+        show_volume
+        ;;
+esac

@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+import sys, os, subprocess
+
+FNULL = open(os.devnull, 'w')
+
+def get_volume():
+    return int(filter(str.isdigit,subprocess.check_output('pactl list sinks | grep -m 1 -e "Volume:*"', shell=True).split('/')[1]))
+
+def get_status():
+    process = subprocess.Popen("""dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus'|egrep -A 1 "string"|cut -b 26-|cut -d '"' -f 1|egrep -v ^$""", shell=True, stdout=subprocess.PIPE)
+    out, err = process.communicate()
+    if process.returncode == 0:
+        return out.rstrip()
+    else:
+        return 'Paused'
+
+def get_artist():
+    return subprocess.check_output("""dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-|cut -d '"' -f 1|egrep -v ^$""", shell=True).rstrip()
+
+def get_song():
+    return subprocess.check_output("""dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "title"|egrep -v "title"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$""", shell=True).rstrip()
+
+def set_volume(vol):
+    subprocess.Popen('pactl set-sink-volume 0 ' + str(vol) + '%', shell=True, stdout=FNULL)
+
+def mute():
+    subprocess.Popen('pactl set-sink-mute 0 toggle', shell=True, stdout=FNULL)
+
+def show_volume (icon, volume):
+    subprocess.Popen("""gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.Notify 'gnome-settings-daemon' 0 'notification-audio-volume-%s' ' ' '' [] "{'x-canonical-private-synchronous': <'volume'>, 'value': <%s>}" 1""" % (icon, volume), shell=True, stdout=FNULL)
+
+def control(ctrl):
+    process = subprocess.Popen("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.%s" % ctrl, shell=True, stdout=subprocess.PIPE)
+    out, err = process.communicate()
+    if process.returncode != 0:
+        subprocess.Popen("""i3-msg 'workspace 4; exec spotify;'""", shell=True)
+        subprocess.Popen("sleep 1; dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.%s" % ctrl, shell=True, stdout=subprocess.PIPE)
+
+def toggle_status():
+    status = get_status()
+    if status == 'Playing':
+        control('Pause')
+    else:
+        control('Play')
+
+if sys.argv[1] == "gv":
+    print get_volume()
+elif sys.argv[1] == "gs":
+    print get_status()
+elif sys.argv[1] == "song":
+    process = subprocess.Popen("""dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus'""", shell=True, stdout=subprocess.PIPE)
+    out, err = process.communicate()
+    if process.returncode == 0:
+        print get_artist() + ' - ' + get_song()
+    else: 
+        print ''
+elif sys.argv[1] == "rv" or sys.argv[1] == "lv":
+    vol = int(get_volume())
+    if sys.argv[1] == "rv":
+        vol += 5
+        if vol > 100:
+            vol = 100
+    else:
+        vol -= 5
+        if vol < 0:
+            vol = 0
+    set_volume(vol)
+
+    if vol == 0:
+        icon = "off"
+    elif vol < 33:
+        icon = "low"
+    elif vol < 66:
+        icon = "medium"
+    else:
+        icon = "high"
+    show_volume(icon, vol)
+elif sys.argv[1] == "mute":
+    mute()
+    show_volume("muted", 0)
+elif sys.argv[1] == "ts":
+    toggle_status()
+elif sys.argv[1] == "forward":
+    control('Next')
+elif sys.argv[1] == "previous":
+    control('Previous')
