@@ -16,6 +16,7 @@ set $terminal i3-sensible-terminal
 exec --no-startup-id compton -f
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id yabar
+exec --no-startup-id xbindkeys
 
 font pango: FontAwesome 12, Roboto Slab 12
 

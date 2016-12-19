@@ -6,20 +6,36 @@ import sys, subprocess, i3
 # Buttons are defined in ~/.xbindkeysrc
 
 options = {
-    (u'spotify','back') : 'xdotool key ctrl+bracketleft',
-    (u'spotify','forward') : 'xdotool key ctrl+bracketright',
+    #Spotify
+    ('spotify','back') : 'xdotool key ctrl+bracketleft',
+    ('spotify','forward') : 'xdotool key ctrl+bracketright',
+    ('spotify','zoom') : 'xdotool key ctrl+Right',
+    ('spotify','thumb') : 'xdotool key space',
 
-    (u'google-chrome','back') : 'xdotool key BackSpace',
-    (u'google-chrome','forward') : 'xdotool key Shift+BackSpace',
-    (u'google-chrome','zoom') : 'xdotool key ctrl+w',
+    #Chrome
+    ('google-chrome','back') : 'xdotool key BackSpace',
+    ('google-chrome','forward') : 'xdotool key Shift+BackSpace',
+    ('google-chrome','zoom') : 'xdotool key ctrl+w',
+    ('google-chrome','thumb') : 'xdotool key ctrl+r',
 
-    (u'vivaldi-snapshot','back') : 'xdotool key ctrl+Left',
-    (u'vivaldi-snapshot','forward') : 'xdotool key ctrl+Right',
-    (u'vivaldi-snapshot','zoom') : 'xdotool key ctrl+w',
+    #Vivaldi
+    ('vivaldi-stable','back') : 'xdotool key ctrl+Left',
+    ('vivaldi-stable','forward') : 'xdotool key ctrl+Right',
+    ('vivaldi-stable','zoom') : 'xdotool key ctrl+w',
+    ('vivaldi-stable','thumb') : 'xdotool key ctrl+r',
     
+    #Nautilus
+    ('nautilus','back') : 'xdotool key BackSpace',
+    
+    #Atom
+    ('atom','zoom') : 'xdotool key ctrl+w',
+    ('atom','thumb') : 'xdotool key ctrl+s',
 }
 
 current = i3.filter(nodes=[], focused=True)[0]['window_properties']['class'].lower()
 button = sys.argv[1]
 
-subprocess.Popen(options[(current,button)], shell=True)
+print(current + ' ' + button)
+
+if (current,button) in options:
+    subprocess.Popen(options[(current,button)], shell=True)
