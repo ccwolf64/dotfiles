@@ -1,0 +1,29 @@
+2016/12/18-23:31:01.237 21625 Reusing MANIFEST /home/chris/.config/vivaldi/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/12/18-23:31:01.237 21625 Recovering log #60
+2016/12/18-23:31:01.251 21625 Reusing old log /home/chris/.config/vivaldi/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000060.log 
+2016/12/18-23:31:01.863 21625 Current memtable full; waiting...
+2016/12/18-23:31:01.863 21335 Level-0 table #64: started
+2016/12/18-23:31:01.895 21335 Level-0 table #64: 2727422 bytes OK
+2016/12/18-23:31:01.903 21335 Delete type=0 #60
+2016/12/18-23:31:01.904 21335 Level-0 table #66: started
+2016/12/18-23:31:01.904 21335 Level-0 table #66: 0 bytes OK
+2016/12/18-23:31:01.907 21335 Delete type=0 #63
+2016/12/18-23:31:01.907 21335 Manual compaction at level-0 from '\x00\x09\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at '\x00\x02\x01\x02\x01\x19\x000\x001\x001\x009\x009\x009\x007\x009\x001\x009\x009\x008\x002\x008\x000\x002\x004\x001\x001\x001\x00_\x001\x00_\x00u\x00p' @ 352 : 0
+2016/12/18-23:31:01.907 21335 Compacting 4@0 + 2@1 files
+2016/12/18-23:31:01.999 21335 Generated table #67@0: 9 keys, 2625407 bytes
+2016/12/18-23:31:02.071 21335 Generated table #68@0: 14 keys, 99141 bytes
+2016/12/18-23:31:02.071 21335 Compacted 4@0 + 2@1 files => 2724548 bytes
+2016/12/18-23:31:02.072 21335 compacted to: files[ 0 2 1 0 0 0 0 ]
+2016/12/18-23:31:02.072 21335 Delete type=2 #64
+2016/12/18-23:31:02.073 21335 Delete type=2 #59
+2016/12/18-23:31:02.073 21335 Delete type=2 #54
+2016/12/18-23:31:02.074 21335 Delete type=2 #55
+2016/12/18-23:31:02.074 21335 Delete type=2 #57
+2016/12/18-23:31:02.074 21335 Delete type=2 #61
+2016/12/18-23:31:02.075 21335 Manual compaction at level-0 from '\x00\x02\x01\x02\x01\x19\x000\x001\x001\x009\x009\x009\x007\x009\x001\x009\x009\x008\x002\x008\x000\x002\x004\x001\x001\x001\x00_\x001\x00_\x00u\x00p' @ 352 : 0 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at (end)
+2016/12/19-03:21:11.824 21335 Level-0 table #70: started
+2016/12/19-03:21:11.875 21335 Level-0 table #70: 6683880 bytes OK
+2016/12/19-03:21:11.877 21335 Delete type=0 #65
+2016/12/19-14:32:13.830 21335 Level-0 table #72: started
+2016/12/19-14:32:13.888 21335 Level-0 table #72: 7089875 bytes OK
+2016/12/19-14:32:13.890 21335 Delete type=0 #69

@@ -1,0 +1,30 @@
+2016/12/16-17:25:08.721 15845 Reusing MANIFEST /home/chris/.config/vivaldi/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/12/16-17:25:08.721 15845 Recovering log #47
+2016/12/16-17:25:08.721 15845 Reusing old log /home/chris/.config/vivaldi/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000047.log 
+2016/12/16-17:25:10.858 15845 Current memtable full; waiting...
+2016/12/16-17:25:10.866 32062 Level-0 table #51: started
+2016/12/16-17:25:10.877 32062 Level-0 table #51: 594 bytes OK
+2016/12/16-17:25:10.882 32062 Delete type=0 #47
+2016/12/16-17:25:10.882 32062 Level-0 table #53: started
+2016/12/16-17:25:10.882 32062 Level-0 table #53: 0 bytes OK
+2016/12/16-17:25:10.889 32062 Delete type=0 #50
+2016/12/16-17:25:10.889 32062 Manual compaction at level-0 from '\x00\x08\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at '\x00\x02\x01\x02\x01\x19\x000\x001\x001\x009\x009\x009\x007\x009\x001\x009\x009\x008\x002\x008\x000\x002\x004\x001\x001\x001\x00_\x001\x00_\x00u\x00p' @ 298 : 0
+2016/12/16-17:25:10.889 32062 Compacting 2@0 + 2@1 files
+2016/12/16-17:25:10.988 32062 Generated table #54@0: 9 keys, 2626919 bytes
+2016/12/16-17:25:11.017 32062 Generated table #55@0: 14 keys, 93329 bytes
+2016/12/16-17:25:11.017 32062 Compacted 2@0 + 2@1 files => 2720248 bytes
+2016/12/16-17:25:11.028 32062 compacted to: files[ 0 2 1 0 0 0 0 ]
+2016/12/16-17:25:11.028 32062 Delete type=2 #51
+2016/12/16-17:25:11.029 32062 Manual compaction at level-0 from '\x00\x02\x01\x02\x01\x19\x000\x001\x001\x009\x009\x009\x007\x009\x001\x009\x009\x008\x002\x008\x000\x002\x004\x001\x001\x001\x00_\x001\x00_\x00u\x00p' @ 298 : 0 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at (end)
+2016/12/16-17:26:00.853 32062 Level-0 table #57: started
+2016/12/16-17:26:00.947 32062 Level-0 table #57: 5349455 bytes OK
+2016/12/16-17:26:00.955 32062 Delete type=2 #45
+2016/12/16-17:26:00.955 32062 Delete type=2 #46
+2016/12/16-17:26:00.955 32062 Delete type=2 #48
+2016/12/16-17:26:00.956 32062 Delete type=0 #52
+2016/12/17-07:06:09.837 32062 Level-0 table #59: started
+2016/12/17-07:06:09.905 32062 Level-0 table #59: 5857745 bytes OK
+2016/12/17-07:06:09.911 32062 Delete type=0 #56
+2016/12/18-13:28:51.846 32062 Level-0 table #61: started
+2016/12/18-13:28:51.914 32062 Level-0 table #61: 6767503 bytes OK
+2016/12/18-13:28:51.916 32062 Delete type=0 #58

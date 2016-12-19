@@ -1,0 +1,16 @@
+2016/12/18-16:26:23.648 29081 Reusing MANIFEST /home/chris/.config/vivaldi/Default/Session Storage/MANIFEST-000001
+2016/12/18-16:26:23.649 29081 Recovering log #388
+2016/12/18-16:26:23.649 29081 Reusing old log /home/chris/.config/vivaldi/Default/Session Storage/000388.log 
+2016/12/18-16:27:50.204 14053 Level-0 table #392: started
+2016/12/18-16:27:50.208 14053 Level-0 table #392: 91666 bytes OK
+2016/12/18-16:27:50.211 14053 Delete type=0 #388
+2016/12/18-16:27:50.211 14053 Compacting 4@0 + 2@1 files
+2016/12/18-16:27:50.260 14053 Generated table #393@0: 11682 keys, 1628260 bytes
+2016/12/18-16:27:50.260 14053 Compacted 4@0 + 2@1 files => 1628260 bytes
+2016/12/18-16:27:50.263 14053 compacted to: files[ 0 1 1 0 0 0 0 ]
+2016/12/18-16:27:50.263 14053 Delete type=2 #383
+2016/12/18-16:27:50.263 14053 Delete type=2 #389
+2016/12/18-16:27:50.263 14053 Delete type=2 #387
+2016/12/18-16:27:50.263 14053 Delete type=2 #385
+2016/12/18-16:27:50.263 14053 Delete type=2 #392
+2016/12/18-16:27:50.263 14053 Delete type=2 #382

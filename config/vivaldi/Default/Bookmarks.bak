@@ -1,0 +1,244 @@
+{
+   "checksum": "da1e00e69557755e53edc0f7cdfec396",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13108583320936096",
+               "id": "52",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "github",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/52?1464109738978"
+               },
+               "name": "Github",
+               "type": "url",
+               "url": "http://github.com/"
+            }, {
+               "date_added": "13108515668242344",
+               "id": "43",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/43?1464043669938"
+               },
+               "name": "Youtube",
+               "type": "url",
+               "url": "http://youtube.com/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "32",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "soundcloud",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/32?1464043600890"
+               },
+               "name": "SoundCloud",
+               "type": "url",
+               "url": "https://soundcloud.com/stream"
+            }, {
+               "date_added": "13108515703632539",
+               "id": "44",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "gmail",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/44?1464042135212"
+               },
+               "name": "Gmail",
+               "type": "url",
+               "url": "https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "31",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "drive",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/31?1464043615805"
+               },
+               "name": "Google Drive",
+               "type": "url",
+               "url": "https://drive.google.com/drive/my-drive"
+            }, {
+               "date_added": "13108442361000000",
+               "id": "25",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "bank",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/25?1463968977182"
+               },
+               "name": "Congressional Federal",
+               "type": "url",
+               "url": "https://www.congressionalfcu.org/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "27",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "testudo",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/27?1464043589496"
+               },
+               "name": "Testudo",
+               "type": "url",
+               "url": "http://www.testudo.umd.edu/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "28",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "canvas",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/28?1464055524940"
+               },
+               "name": "Canvas",
+               "type": "url",
+               "url": "https://umd.instructure.com/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "30",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "piazza",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/30?1464055519762"
+               },
+               "name": "Piazza",
+               "type": "url",
+               "url": "https://piazza.com/class/iju8kzp83py4ow"
+            }, {
+               "date_added": "13108442361000000",
+               "id": "26",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/26?1463968972875"
+               },
+               "name": "myIDcare",
+               "type": "url",
+               "url": "https://opm.myidcare.com/dashboard"
+            }, {
+               "date_added": "13108529002333639",
+               "id": "47",
+               "meta_info": {
+                  "Description": "",
+                  "Nickname": "",
+                  "Speeddial": "false",
+                  "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/47?1464055406368"
+               },
+               "name": "Amazon",
+               "type": "url",
+               "url": "http://amazon.com/"
+            }, {
+               "date_added": "13108529151559807",
+               "id": "48",
+               "meta_info": {
+                  "Thumbnail": "chrome://thumb/https://us-west-2.console.aws.amazon.com/console/home?nc2=h_m_mc&region=us-west-2#"
+               },
+               "name": "AWS",
+               "type": "url",
+               "url": "https://us-west-2.console.aws.amazon.com/console/home?nc2=h_m_mc&region=us-west-2#"
+            } ],
+            "date_added": "13108515610695292",
+            "date_modified": "13108583320936096",
+            "id": "41",
+            "meta_info": {
+               "Description": "",
+               "Nickname": "",
+               "Speeddial": "true",
+               "Thumbnail": ""
+            },
+            "name": "Speed Dial",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13108442362000000",
+               "id": "34",
+               "name": "Office of Student Financial Aid",
+               "type": "url",
+               "url": "http://www.financialaid.umd.edu/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "35",
+               "name": "Computer Science",
+               "type": "url",
+               "url": "http://www.cs.umd.edu/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "36",
+               "name": "Schedule of Classes",
+               "type": "url",
+               "url": "https://ntst.umd.edu/soc/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "37",
+               "name": "Map",
+               "type": "url",
+               "url": "https://terpnav.umd.edu/map/"
+            }, {
+               "date_added": "13108442362000000",
+               "id": "38",
+               "name": "Featured Software · TERPware",
+               "type": "url",
+               "url": "https://terpware.umd.edu/Windows"
+            } ],
+            "date_added": "13108442457062358",
+            "date_modified": "0",
+            "id": "33",
+            "meta_info": {
+               "Description": "",
+               "Nickname": "",
+               "Speeddial": "false",
+               "Thumbnail": ""
+            },
+            "name": "UMD",
+            "type": "folder"
+         } ],
+         "date_added": "13108407186938192",
+         "date_modified": "13108515610695426",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13108407186938198",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13108407186938199",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      },
+      "trash": {
+         "children": [ {
+            "date_added": "13108583295071793",
+            "id": "51",
+            "meta_info": {
+               "Thumbnail": "chrome://thumb/http://bookmark_thumbnail/51?1464109698460"
+            },
+            "name": "github",
+            "type": "url",
+            "url": "http://github/"
+         } ],
+         "date_added": "13108407186938201",
+         "date_modified": "13108583305279090",
+         "id": "4",
+         "name": "Trash",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
